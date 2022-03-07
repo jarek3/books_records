@@ -33,18 +33,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'name',
-            ['label' => 'Surname',
-                'headerOptions' => ['style' => 'min-width:90px'], //aby byly buttony v jedné řádce
-                //'contentOptions' => ['style' => 'text-align:center;'], //aby byly buttony uprostřed
-                'format' => 'raw', //kvůli target _blank
-                'value'=> function($model)
-                {
-                    $url = \yii\helpers\Url::to(['books/index', 'BooksSearch[title]' => $model->id]);
-                    $linkText = $model->surname;
-                    $options = ['class' => 'btn btn-noPjax', 'target' => '_blank'];
-                    return \yii\helpers\Html::a($linkText, $url, $options);
-                }
-            ],
+            'surname',
+
 
             [
                 'class' => ActionColumn::className(),
