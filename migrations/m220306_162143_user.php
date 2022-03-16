@@ -12,18 +12,17 @@ class m220313_162504_user extends Migration
      */
     public function safeUp()
     {
-     $this->execute (CREATE TABLE IF NOT EXISTS `user`
-                                           (
+     $this->execute (CREATE TABLE IF NOT EXISTS `user`(
      `id` INT NOT NULL AUTO_INCREMENT,
      `email` VARCHAR(255) NOT NULL,
      `password` VARCHAR(255) NOT NULL,
      PRIMARY KEY (`id`),
      UNIQUE INDEX `email_UNIQUE` (`email` ASC))
-     ENGINE = InnoDB;
-                  )
+     ENGINE = InnoDB;)
         
-     $this->execute (INSERT INTO `user` (`id`, `email`, `password`, `authKey`) 
-                    VALUES (1, 'jarek.patrny@gmail.com', 'admin', '');)    
+     $this->execute (INSERT INTO `user` (`id`, `email`, `password`, `authKey`)
+                    VALUES (1, 'jarek.patrny@gmail.com', 'admin', '');
+                    )
 
     }
 
