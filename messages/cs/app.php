@@ -1,5 +1,5 @@
 <?php
 return ['Books' =>'Knihy',
-    'Authors' => 'Autoři'];
+    'Authors' => 'Autoři', 'Users' => 'Uživatelé'];
 ?>
 
