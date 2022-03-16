@@ -38,11 +38,12 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
-            ['label' => 'Books', 'url' => ['/books/index']],
-            ['label' => 'Authors', 'url' => ['/authors/index']],
+            ['label' => 'Yii framework', 'url' => ['/site/index']],
+            ['label' => 'O nás', 'url' => ['/site/about']],
+            ['label' => 'Kontakt', 'url' => ['/site/contact']],
+            ['label' => 'Knihy', 'url' => ['/books/index']],
+            ['label' => 'Autoři', 'url' => ['/authors/index']],
+            ['label' => 'Uživatelé', 'url' => ['/user/index']],
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
             ) : (
