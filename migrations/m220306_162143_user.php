@@ -3,23 +3,28 @@
 use yii\db\Migration;
 
 /**
- * Class m220306_162143_users
+ * Class m220313_162504_user
  */
-class m220306_162143_users extends Migration
+class m220313_162504_user extends Migration
 {
     /**
      * {@inheritdoc}
      */
     public function safeUp()
     {
-        $this->execute(CREATE TABLE IF NOT EXISTS `user` (
+  $this->execute (CREATE TABLE IF NOT EXISTS `user`
+                                           (
   `id` INT NOT NULL AUTO_INCREMENT,
   `email` VARCHAR(255) NOT NULL,
   `password` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `email_UNIQUE` (`email` ASC))
   ENGINE = InnoDB;
-);
+                  )
+        
+  $this->execute (INSERT INTO `user` (`id`, `email`, `password`, `authKey`) VALUES
+    (1, 'jarek.patrny@gmail.com', 'admin', '');)    
+
     }
 
     /**
@@ -27,7 +32,7 @@ class m220306_162143_users extends Migration
      */
     public function safeDown()
     {
-        echo "m220306_162143_users cannot be reverted.\n";
+        echo "m220313_162504_user cannot be reverted.\n";
 
         return false;
     }
@@ -41,7 +46,7 @@ class m220306_162143_users extends Migration
 
     public function down()
     {
-        echo "m220306_162143_users cannot be reverted.\n";
+        echo "m220313_162504_user cannot be reverted.\n";
 
         return false;
     }
