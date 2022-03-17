@@ -45,7 +45,7 @@ AppAsset::register($this);
             ['label' => 'Autoři', 'url' => ['/authors/index']],
             ['label' => 'Uživatelé', 'url' => ['/user/index']],
             Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
+                ['label' => 'Přihlášení', 'url' => ['/site/login']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])
