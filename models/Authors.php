@@ -41,8 +41,8 @@ class Authors extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('modelBooks', 'ID'),
-            'name' => Yii::t('modelBooks', 'Name'),
-            'surname' => Yii::t('modelBooks', 'Surname'),
+            'name' => Yii::t('modelBooks', 'Jméno'),
+            'surname' => Yii::t('modelBooks', 'Příjmení'),
         ];
     }
 

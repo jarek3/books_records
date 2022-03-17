@@ -33,8 +33,7 @@ class UserController extends Controller
 
     /**
      * Lists all User models.
-     *
-     * @return string
+     * @return mixed
      */
     public function actionIndex()
     {
@@ -50,7 +49,7 @@ class UserController extends Controller
     /**
      * Displays a single User model.
      * @param int $id ID
-     * @return string
+     * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
     public function actionView($id)
@@ -63,7 +62,7 @@ class UserController extends Controller
     /**
      * Creates a new User model.
      * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return string|\yii\web\Response
+     * @return mixed
      */
     public function actionCreate()
     {
@@ -86,7 +85,7 @@ class UserController extends Controller
      * Updates an existing User model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param int $id ID
-     * @return string|\yii\web\Response
+     * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
     public function actionUpdate($id)
@@ -106,7 +105,7 @@ class UserController extends Controller
      * Deletes an existing User model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param int $id ID
-     * @return \yii\web\Response
+     * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
     public function actionDelete($id)
@@ -125,7 +124,7 @@ class UserController extends Controller
      */
     protected function findModel($id)
     {
-        if (($model = User::findOne(['id' => $id])) !== null) {
+        if (($model = User::findOne($id)) !== null) {
             return $model;
         }
 

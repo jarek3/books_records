@@ -34,8 +34,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php else: ?>
 
         <p>
-            If you have business inquiries or other questions, please fill out the following form to contact us.
-            Thank you.
+            Máte-li obchodní nebo jiné otázky, prosím kontaktujte nás prostřednictvím následujícího formuláře.</br>
+            Děkujeme.
         </p>
 
         <div class="row">
@@ -43,17 +43,17 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
 
-                    <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
+                    <?= $form->field($model, 'name')->textInput(['autofocus' => true])->label('Jméno') ?>
 
-                    <?= $form->field($model, 'email') ?>
+                    <?= $form->field($model, 'email')->label('E-mail')?>
 
-                    <?= $form->field($model, 'subject') ?>
+                    <?= $form->field($model, 'subject')->label('Předmět') ?>
 
-                    <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
+                    <?= $form->field($model, 'body')->textarea(['rows' => 6])->label('Obsah zprávy') ?>
 
                     <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
                         'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
-                    ]) ?>
+                    ])->label('Ověřovací kód') ?>
 
                     <div class="form-group">
                         <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>

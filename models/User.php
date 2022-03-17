@@ -41,9 +41,9 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
     {
         return [
             'id' => Yii::t('modelUser', 'ID'),
-            'email' => Yii::t('modelUser', 'Email'),
-            'password' => Yii::t('modelUser', 'Password'),
-            'authKey' => Yii::t('modelUser', 'Auth Key'),
+            'email' => Yii::t('modelUser', 'E-mail'),
+            'password' => Yii::t('modelUser', 'Heslo'),
+            'authKey' => Yii::t('modelUser', 'Autentizační klíč'),
         ];
     }
 

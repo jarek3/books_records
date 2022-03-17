@@ -44,9 +44,9 @@ class Books extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('modelBooks', 'ID'),
-            'title' => Yii::t('modelBooks', 'Title'),
-            'author' => Yii::t('modelBooks', 'Author'),
-            'description' => Yii::t('modelBooks', 'Description'),
+            'title' => Yii::t('modelBooks', 'Titul'),
+            'author' => Yii::t('modelBooks', 'Autor'),
+            'description' => Yii::t('modelBooks', 'Popis'),
         ];
     }
 
