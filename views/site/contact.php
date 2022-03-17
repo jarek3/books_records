@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php else: ?>
 
         <p>
-            Máte-li obchodní nebo jiné otázky, prosím kontaktujte nás prostřednictvím následujícího formuláře.</br>
+            Máte-li obchodní nebo jiné otázky, kontaktujte nás prosím prostřednictvím následujícího formuláře.</br>
             Děkujeme.
         </p>
 
