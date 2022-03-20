@@ -47,6 +47,11 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
         ];
     }
 
+    public static function getAll() {
+        $all = User::find()->asArray()->all();
+        $result = \yii\helpers\ArrayHelper::map($all, 'id', 'email');
+        return $result;
+    }
 
     // ----- IdentityInterface methods:
 
@@ -82,7 +87,7 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
 
     // ----- Because of view
 
-    public function getUsername($email) {
+    public function getUsername() {
         return $this->email;
     }
 }
