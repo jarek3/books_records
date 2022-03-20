@@ -12,7 +12,7 @@ class m220306_162040_books_and_authors extends Migration
      */
     public function safeUp()
     {
-     $this->execute(CREATE TABLE IF NOT EXISTS `books` (
+     $this->execute("CREATE TABLE IF NOT EXISTS `books` (
      `id` int NOT NULL, AUTO_INCREMENT,
      `title` varchar(255) NOT NULL,
      `author` varchar(255) DEFAULT NULL,
@@ -30,25 +30,25 @@ class m220306_162040_books_and_authors extends Migration
      REFERENCES `books` (`id`)
      ON DELETE NO ACTION
      ON UPDATE NO ACTION)
-     ENGINE=InnoDB;);
+     ENGINE=InnoDB;");
 
-     $this->execute(CREATE TABLE IF NOT EXISTS `authors` (
+     $this->execute("CREATE TABLE IF NOT EXISTS `authors` (
      `id` int NOT NULL,AUTO_INCREMENT,
      `name` varchar(255) DEFAULT NULL,
      `surname` varchar(255) DEFAULT NULL,
      PRIMARY KEY (`id`))
-     ENGINE=InnoDB;)
+     ENGINE=InnoDB;");
                    
-     $this->execute (INSERT INTO `books` (`id`, `title`, `author`, `description`)
+     $this->execute ("INSERT INTO `books` (`id`, `title`, `author`, `description`)
                      VALUES (1, 'Learn PHP 8', 'Steve Prettyman', 'In this book you will create a complete three-tier application using a natural process of building and testing modules within each tier.'),
                             (2, 'Jižní stezka Českem od východu k západu', 'Jan Hocek', 'Jižní stezka vede napříč celou zemí mezi nejzápadnějším a nejvýchodnějším bodem České republiky, prostupuje nádherné česko-slovenské pohraničí, vydává se přes jihomoravské vinohrady a svou pouť končí přechodem Šumavy a Českého lesa.'),
                             (3, 'Českem od severu k jihu', 'Jan Hocek', '600 km dlouhá trasa od našeho nejsevernějšího bodu po bod nejjižnější.');
-                    );
+                    ");
      
-     $this->execute (INSERT INTO `authors` (`id`, `name`, `surname`) 
+     $this->execute ("INSERT INTO `authors` (`id`, `name`, `surname`)
                      VALUES (1, 'Steve', 'Prettyman'),
                             (2, 'Jan', 'Hocek');
-                    );
+                    ");
 
     }
 
