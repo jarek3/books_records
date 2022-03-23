@@ -85,7 +85,7 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
         return $this->password === sha1($password);
     }
 
-    // ----- Because of view
+    // ----- Because of views\layouts\main.php ... there is no username attribute in the model
 
     public function getUsername() {
         return $this->email;
