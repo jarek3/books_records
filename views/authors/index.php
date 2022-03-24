@@ -1,7 +1,6 @@
 <?php
 
 use app\models\Authors;
-use app\models\BooksHasAuthors;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
@@ -34,8 +33,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'name',
             'surname',
-
-
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, Authors $model, $key, $index, $column) {

@@ -1,11 +1,10 @@
 <?php
 
-
+use app\models\User;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
-use app\models\User;
 use yii\widgets\Pjax;
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\UserSearch */
@@ -33,7 +32,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'email:email',
-            
+            'password',
+            'authKey',
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, User $model, $key, $index, $column) {

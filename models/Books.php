@@ -43,10 +43,10 @@ class Books extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('modelBooks', 'ID'),
-            'title' => Yii::t('modelBooks', 'Titul'),
-            'author' => Yii::t('modelBooks', 'Autor'),
-            'description' => Yii::t('modelBooks', 'Popis'),
+            'id' => Yii::t('app', 'ID'),
+            'title' => Yii::t('app', 'Title'),
+            'author' => Yii::t('app', 'Author'),
+            'description' => Yii::t('app', 'Description'),
         ];
     }
 

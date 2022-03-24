@@ -28,7 +28,7 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
     public function rules()
     {
         return [
-            [['email'], 'required'],
+            [['email', 'password'], 'required'],
             [['email', 'password', 'authKey'], 'string', 'max' => 255],
             [['email'], 'unique'],
         ];
@@ -40,10 +40,10 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('modelUser', 'ID'),
-            'email' => Yii::t('modelUser', 'E-mail'),
-            'password' => Yii::t('modelUser', 'Heslo'),
-            'authKey' => Yii::t('modelUser', 'Autentizační klíč'),
+            'id' => Yii::t('app', 'ID'),
+            'email' => Yii::t('app', 'Email'),
+            'password' => Yii::t('app', 'Password'),
+            'authKey' => Yii::t('app', 'Auth Key'),
         ];
     }
 
@@ -85,9 +85,9 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
         return $this->password === sha1($password);
     }
 
-    // ----- Because of views\layouts\main.php ... there is no username attribute in the model
+    // ----- Because of view
 
-    public function getUsername() {
+    public function getUsername($email) {
         return $this->email;
     }
 }

@@ -40,9 +40,9 @@ class Authors extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('modelBooks', 'ID'),
-            'name' => Yii::t('modelBooks', 'Jméno'),
-            'surname' => Yii::t('modelBooks', 'Příjmení'),
+            'id' => Yii::t('app', 'ID'),
+            'name' => Yii::t('app', 'Name'),
+            'surname' => Yii::t('app', 'Surname'),
         ];
     }
 
@@ -64,12 +64,5 @@ class Authors extends \yii\db\ActiveRecord
     public function getBooksHasAuthors()
     {
         return $this->hasMany(BooksHasAuthors::className(), ['authors_id' => 'id']);
-    }
-
-    public static function getAll()
-    {
-        $all = Authors::find()->asArray()->all();
-        $result = \yii\helpers\ArrayHelper::map($all, 'id', 'surname');
-        return $result;
     }
 }
