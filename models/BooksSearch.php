@@ -65,7 +65,7 @@ class BooksSearch extends Books
         $query->andFilterWhere(['like', 'title', $this->title])
             ->andFilterWhere(['like', 'author', $this->author])
             ->andFilterWhere(['like', 'description', $this->description])
-            ->andFilterWhere(['like', 'description', $this->year_of_publication]);
+            ->andFilterWhere(['like', 'year_of_publication', $this->year_of_publication]);
 
         return $dataProvider;
     }
