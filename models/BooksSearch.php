@@ -19,6 +19,7 @@ class BooksSearch extends Books
         return [
             [['id'], 'integer'],
             [['title', 'author', 'description'], 'safe'],
+            [['year_of_publication'], 'date'],
         ];
     }
 
@@ -63,7 +64,8 @@ class BooksSearch extends Books
 
         $query->andFilterWhere(['like', 'title', $this->title])
             ->andFilterWhere(['like', 'author', $this->author])
-            ->andFilterWhere(['like', 'description', $this->description]);
+            ->andFilterWhere(['like', 'description', $this->description])
+            ->andFilterWhere(['like', 'description', $this->year_of_publication]);
 
         return $dataProvider;
     }

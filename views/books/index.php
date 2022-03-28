@@ -34,6 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'title',
             'author',
             'description:ntext',
+            'year_of_publication',
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, Books $model, $key, $index, $column) {

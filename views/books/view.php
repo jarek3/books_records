@@ -33,6 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'title',
             'author',
             'description:ntext',
+            'year_of_publication',
         ],
     ]) ?>
 

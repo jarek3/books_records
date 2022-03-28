@@ -11,6 +11,7 @@ use Yii;
  * @property string $title
  * @property string|null $author
  * @property string|null $description
+ * @property string|null $year_of_publication
  *
  * @property Authors[] $authors
  * @property BooksHasAuthors[] $booksHasAuthors
@@ -34,6 +35,7 @@ class Books extends \yii\db\ActiveRecord
             [['title'], 'required'],
             [['description'], 'string'],
             [['title', 'author'], 'string', 'max' => 255],
+            [['year_of_publication'], 'date', 'format'=>'Y'],
         ];
     }
 
@@ -47,6 +49,7 @@ class Books extends \yii\db\ActiveRecord
             'title' => Yii::t('app', 'Title'),
             'author' => Yii::t('app', 'Author'),
             'description' => Yii::t('app', 'Description'),
+            'year_of_publication' => Yii::t('app', 'Year_of_publication'),
         ];
     }
 
