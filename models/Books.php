@@ -76,7 +76,7 @@ class Books extends \yii\db\ActiveRecord
     public static function getAll()
     {
         $all = Books::find()->asArray()->all();
-        $result = \yii\helpers\ArrayHelper::map($all, 'id', 'tittle');
+        $result = \yii\helpers\ArrayHelper::map($all, 'id', 'title');
         return $result;
     }
 }
