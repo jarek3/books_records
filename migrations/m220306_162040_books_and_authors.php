@@ -37,7 +37,7 @@ class m220306_162040_books_and_authors extends Migration
      `name` VARCHAR(255) DEFAULT NULL,
      `surname` VARCHAR(255) DEFAULT NULL,
      PRIMARY KEY (`id`))
-     EN;");
+     ENGINE=InnoDB;");
                    
      $this->execute ("INSERT INTO `books` (`id`, `title`, `author`, `description`)
                      VALUES (1, `Learn PHP 8`, `Steve Prettyman`, `In this book you will create a complete three-tier application using a natural process of building and testing modules within each tier.`),
