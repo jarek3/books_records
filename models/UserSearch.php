@@ -62,8 +62,8 @@ class UserSearch extends User
         ]);
 
         $query->andFilterWhere(['like', 'email', $this->email])
-            ->andFilterWhere(['like', 'password', $this->password])
-            ->andFilterWhere(['like', 'authKey', $this->authKey]);
+              ->andFilterWhere(['like', 'password', $this->password])
+              ->andFilterWhere(['like', 'authKey', $this->authKey]);
 
         return $dataProvider;
     }

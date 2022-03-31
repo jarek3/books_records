@@ -30,7 +30,7 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
         return [
             [['email', 'password'], 'required'],
             [['email', 'password', 'authKey'], 'string', 'max' => 255],
-            [['email'], 'unique'],
+            [['email','email'], 'unique'],
         ];
     }
 
@@ -87,7 +87,7 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
 
     // ----- Because of view
 
-    public function getUsername($email) {
+    public function getUsername() {
         return $this->email;
     }
 }
