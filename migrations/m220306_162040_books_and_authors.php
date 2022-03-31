@@ -37,17 +37,17 @@ class m220306_162040_books_and_authors extends Migration
      `name` VARCHAR(255) DEFAULT NULL,
      `surname` VARCHAR(255) DEFAULT NULL,
      PRIMARY KEY (`id`))
-     ENGINE=InnoDB;");
+     EN;");
                    
      $this->execute ("INSERT INTO `books` (`id`, `title`, `author`, `description`)
-                     VALUES (1, 'Learn PHP 8', 'Steve Prettyman', 'In this book you will create a complete three-tier application using a natural process of building and testing modules within each tier.'),
-                            (2, 'Jižní stezka Českem od východu k západu', 'Jan Hocek', 'Jižní stezka vede napříč celou zemí mezi nejzápadnějším a nejvýchodnějším bodem České republiky, prostupuje nádherné česko-slovenské pohraničí, vydává se přes jihomoravské vinohrady a svou pouť končí přechodem Šumavy a Českého lesa.'),
-                            (3, 'Českem od severu k jihu', 'Jan Hocek', '600 km dlouhá trasa od našeho nejsevernějšího bodu po bod nejjižnější.')
+                     VALUES (1, `Learn PHP 8`, `Steve Prettyman`, `In this book you will create a complete three-tier application using a natural process of building and testing modules within each tier.`),
+                            (2, `Jižní stezka Českem od východu k západu`, `Jan Hocek`, `Jižní stezka vede napříč celou zemí mezi nejzápadnějším a nejvýchodnějším bodem České republiky, prostupuje nádherné česko-slovenské pohraničí, vydává se přes jihomoravské vinohrady a svou pouť končí přechodem Šumavy a Českého lesa.`),
+                            (3, `Českem od severu k jihu`, `Jan Hocek`, `600 km dlouhá trasa od našeho nejsevernějšího bodu po bod nejjižnější.`)
                     ");
      
      $this->execute ("INSERT INTO `authors` (`id`, `name`, `surname`)
-                     VALUES (1, 'Steve', 'Prettyman'),
-                            (2, 'Jan', 'Hocek')
+                     VALUES (1, `Steve`, `Prettyman`),
+                            (2, `Jan`, `Hocek`)
                     ");
 
     }
