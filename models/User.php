@@ -90,4 +90,10 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
     public function getUsername() {
         return $this->email;
     }
+
+    public function beforeSave($insert) {
+        if(isset($this->password))
+            $this->password = sha1($this->password);
+         return parent::beforeSave($insert);
+    }
 }
