@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use yii;
 use app\models\Books;
 use app\models\BooksSearch;
 use yii\web\Controller;
