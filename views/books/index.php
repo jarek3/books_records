@@ -10,7 +10,7 @@ use yii\widgets\Pjax;
 /* @var $searchModel app\models\BooksSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Books');
+$this->title = Yii::t('app', 'Books_records');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="books-index">
